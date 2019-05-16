@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    color: #d4d4dc;
+}
+
+#brand {
+    font-family: 'Oleo Script', cursive;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0px;
+    overflow: visible;
+    padding: 0px;
+    text-align: center;
+}
+
+header {
+    background-color: #feda6a;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #393f4d;
+    position: relative;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* display: none; */
+    opacity: 0;
+    transform: translateX(-200%);
+    transition: all 0.4s linear;
+}
+
+#homePage {
+    height: 100%;
+}
+
+#addPage {
+    height: 100%;
+}
+
+.active {
+    /* display: block; */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title {
+    margin-bottom: 22px;
+    text-align: left;
+    margin-left: 50px;
+    color: black;
+}
+
+#brand {
+    text-align: center;
+    color: black;
+}
+
+#fabButton {
+    font-size: 48px;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    margin: 6px;
+    cursor: pointer;
+    color: #feda6a;
+    text-shadow: 1px 4px 12px black;
+}
+
+#fabButton:active {
+    animation: wiggle .1s infinite alternate;
+    transform-origin: center 60%;
+    transform: scale(1.1);
+}
+
+#fabButton:hover {
+    transform: scale(1.1);
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+#home {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#homeButton {
+    font-size: 48px;
+    position: fixed;
+    bottom: 32px;
+    cursor: pointer;
+    color: #d4d4dc;
+    text-shadow: 1px 4px 12px black;
+
+}
+
+#inputDiv {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#cameraCtrlDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#photoCtrlDiv {
+    display: none;
+    justify-content: center;
+
+}
+
+#captureBtn {
+    font-size: 48px;
+    cursor: pointer;
+    color: #d4d4dc;
+    padding: 16px;
+    border: 4px solid #d4d4dc;
+    border-radius: 100px;
+    margin-top: 29rem;
+}
+
+#saveButton {
+    cursor: pointer;
+    color: #d4d4dc;
+}
+
+#saveButton:active {
+    transform: scale(1.3);
+}
+
+#cancelButton {
+    cursor: pointer;
+    color: #d4d4dc;
+}
+
+#cancelButton:active {
+    transform: scale(1.3);
+}
+
+#deleteButton {
+    cursor: pointer;
+    color: #1d1e22;
+    position: fixed;
+    top: 5px;
+    right: 6px;
+}
+
+.backButton {
+    position: fixed;
+    top: 5px;
+    left: 6px;
+    cursor: pointer;
+    color: #1d1e22
+}
+
+input {
+    color: #d4d4dc;
+    width: 90%;
+    height: 36px;
+    font-size: 24px;
+    padding-left: 4px;
+    background-color: #4f5668;
+    margin-top: 10px;
+    border: 1px solid #4f5668;
+    border-bottom: 1px solid #d4d4dc;
+}
+
+.star {
+    color: #feda6a;
+    font-size: 3rem;
+}
+
+.star::before {
+    content: '\2606';
+    cursor: pointer;
+}
+
+.star.rated::before {
+    content: '\2605';
+}
+
+.stars {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.0rem;
+    font-weight: 400;
+}
+
+.star:active {
+    transform: scale(1.3);
+}
+
+#reviewList {
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    line-height: 3;
+}
+
+li {
+    padding-left: 2rem;
+}
+
+li:active {
+    background-color: lightgrey;
+    opacity: 0.1;
+    cursor: pointer;
+    color: black;
+}
